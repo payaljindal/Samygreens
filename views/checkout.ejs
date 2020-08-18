@@ -1,0 +1,84 @@
+<%- include ('_layouts/header') -%>
+
+<div class="container">
+
+<% if (cart.length !== 0) { %>
+    <div>
+    <h1 class="page-title">Your Cart</h1>
+</div>
+    <div class="col-xs-6 end col-xs-offset-10" >
+    <a class="clearcart btn btn-danger" href="/cart/clear" style="font-size: 16px;margin-bottom: 12px;">Clear cart</a>
+    </div>
+    <br><br>
+    <table class="table alignmiddle" style="padding: 15px 15px;">
+        
+        <tr>
+            <th style="text-align: center;"> <span style="font-size: 16px;"> Product </span></th>
+            <th style="text-align: center;"><span style="font-size: 16px;"> Update quantity </span></th>
+            <th style="text-align: center;"><span style="font-size: 16px;"> Subtotal </span></th>
+        </tr>
+        
+        <% var total = 0; %>
+        <% cart.forEach(function(product){ %>
+        <% var sub = parseFloat(product.qty * product.price).toFixed(2) %>
+        <% total += +sub %>
+        <tr>
+            <td style="text-align: center;"><img id="noimage" src="/product_images/<%= product.id %>_<%= product.image %>" width="50" height="50">
+                <h3><%= product.title %> </h3><br>
+            </td>
+            
+            
+            <td style="text-align: center;">
+                <a href="/cart/update/<%= product.title %>?action=add" style="font-size: 30px;color: #4CAF50;">+</a>&nbsp;
+                <a href="/cart/update/<%= product.title %>?action=remove" style="font-size: 30px;color: #4CAF50;">-</a>&nbsp;
+                <a href="/cart/update/<%= product.title %>?action=clear" style="font-size: 30px;color:#F37C62"><i class="fa fa-trash"></i></a>&nbsp;
+            </td>
+            <td style="text-align: center;"><span style="font-size: 16px;" > <i class="fa fa-rupee"></i> <%= product.price %>  * <%= product.qty %></span> <br>
+               <span style="font-size: 16px;"> &nbsp;&nbsp;&nbsp;&nbsp;= <i class="fa fa-rupee"></i> <%= sub %></span>
+            </td>
+        </tr>
+        <% }); %>
+        <tr><td></td><td></td>
+            <td colspan="3" style="text-align: center;" ><span style="font-size: 16px;"> <b>Total: </b> <i class="fa fa-rupee"></i> <%= parseFloat(total).toFixed(2) %>
+            </span></td>
+        </tr>
+        <tr>
+            <% var stotal = total*100; %>
+        
+            
+            <td colspan="2"  align="right">
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+        
+    </table>
+   
+    <% } else {%>
+    <h3 class="text-center">Your cart is empty.</h3>
+    <% } %>
+
+    
+    <h1><u>Buy Cart products</u>
+        <br> <br>
+        1. Cash on Delivery
+    </h1>
+    <span style="font-size: medium;">Click on this button to fill the details and get your products delivered :)</span>
+
+    <a class="btn btn-success buynow" href="/cart/buy"  style="align-items: center;font-size: 16px;margin-bottom: 12px;">Fill more details</a>    
+<h1>2. Also, to place order you can call or whatsapp us at <a href="tel:8427966335">8427966335</a></h1>
+<br>
+<h1>Our Paytm number - 8360515485</h1>
+    <script>
+    $(function() {
+   
+        $('a.clearcart').on('click', function () {
+            if (!confirm('Are you sure to clear cart?'))
+                return false;
+        });   
+    });
+        
+    </script>
+</div>
+<%- include ('_layouts/footer') -%>

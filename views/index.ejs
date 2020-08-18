@@ -1,0 +1,65 @@
+<%- include ('_layouts/header') -%>
+<div class="container">
+  <h1 style="text-align: center;font-style: oblique;">All products</h1>
+  <div class=" col-md-10 offset-md-8 ">
+<h1> &nbsp; Search by category</h1>
+<form method="post" action="/products/category">
+    <div class="form-group col-md-3">
+    <!-- <input name="category" class="form-control" placeholder="Looking for?" style="padding: 20px 9px;font-size: 16px"></input> -->
+    <select name="category" style="padding: 10px 9px;font-size: 16px;width: 100%;">
+      <option value=""></option>
+      <option value="Microgreens">Microgreens</option>
+      <option value="Edible Flowers">Edible Flowers</option>
+      <option value="Fresh Herbs">Fresh Herbs</option>
+      <option value="Rockets">Rockets</option>
+      <option value="Basils">Basils</option>
+      <option value="Baby Vegetables">Baby Vegetables</option>
+    </select>
+    </div>
+    <button class="btn btn-default btn-info" style="background-color: #4CAF50;font-size: 16px;text-align: center;padding: 8px 20px;"> <i class="fa fa-search"></i></button>
+</form>
+</div>
+<br>
+
+<div class="row small-up-2 medium-up-3 large-up-2">
+
+<% if (count > 0) { %>
+
+            <% products.forEach(function(product){ %>
+              <div class="column column-block" >
+                
+            <div class="card" style="width: 25rem;padding: 5px 5px;margin-left: 20px;">
+              <a href="/products/details/<%= product._id %>" style="text-decoration: none;">
+                <img class="card-img-top" src="/product_images/<%= product._id %>_<%= product.image %>" alt="<%= product.name %>" width="200" height="200">
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: large;"><%= product.name %></h5>
+                  <p class="card-text" style="font-size: medium;">Category : <%= product.category %></p>
+                  
+                  <a href="/products/details/<%= product._id %>" class="btn btn-default btn-info" style="background-color: #4CAF50;font-size: 16px;text-align: center;">Get Details</a>
+                  <br>  <br>
+                  
+                    <% if (product.available) { %>
+                      <p><span class="btn btn-default btn-info" style="background-color: #4CAF50;font-size: 16px;text-align: center;align-items: flex-end;">Available Now!</span></p>
+                      <% } else {%>
+                          <a href="#" class="btn btn-secondary" style="font-size: 16px;text-align: center;">Not available</a>
+                      <% } %>  
+                    
+                                
+            </div>
+          </div>
+         
+          <br>
+        </div>
+  <% }); %>
+</div>
+
+    <% } else {%>
+    <h3 class="text-center">There are no products.</h3>
+    <% }%>
+</div>
+
+<%- include ('_layouts/footer') -%>
+
+
+

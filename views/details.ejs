@@ -1,0 +1,45 @@
+<%- include ('_layouts/header') -%>
+<div class="container">
+        <center>
+    <h1> <%- name %> </h1>
+    </center> 
+    <div class="row">
+        <div class="col-md-6">
+            <img  src="/product_images/<%= id %>_<%= image %>" alt="<%= name %>" width="100%" height="100%" >
+        </div>
+        <div class="col-md-6 " >
+            <br>
+        
+            <br>
+            <br>
+          
+                <% if (available) { %>
+                  <p><span class="btn btn-default btn-info" style="background-color: #4CAF50;font-size: 16px;text-align: center;align-items: flex-end;">Available Now!</span></p>
+                  <% } else {%>
+                      <a href="#" class="btn btn-secondary" style="font-size: 16px;text-align: center;">Not available</a>
+                  <% } %>  
+                    
+              
+            <br>
+            <span style="font-size:large;">
+            Category -<%- category %>
+            </span>
+            <br>
+            <span style="font-size:large;">
+            Suggested Use - <%- suggesteduse %>
+        </span>
+            <br>
+            
+
+            <br><br>
+      
+            <a href="/products/all" class="btn btn-primary">Go back</a>
+
+            <!-- <a href="/products/all" class="btn btn-primary">Go back</a> -->
+
+           
+        </div>
+    </div>
+</div>
+
+<%- include ('_layouts/footer') -%>
