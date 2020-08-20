@@ -168,7 +168,7 @@ router.get('/edit-product/:id',isAdmin, function (req, res) {
 });
 
 router.post('/edit-product/:id',isAdmin, async function (req, res) {
-    const{ name, flavour, texture, taste, suggesteduse, price , category , image, available} = req.body;
+    const{ name, flavour, texture, taste, suggesteduse, price , category , image , available} = req.body;
     let existing;
     const id = req.params.id;
 
@@ -192,9 +192,12 @@ router.post('/edit-product/:id',isAdmin, async function (req, res) {
             existing.price = price;
             if(category != "")
             existing.category = category;
-            if(typeof req.body.uimage != "undefined"){
-                var path = 'public/product_images/' + id + '_' + existing.image ;
+            // console.log(req.files == null);
+            if(req.files != null){
+                var path = '/product_images/' + id + '_' + existing.image ;
+                // console.log(path);
                 fs.remove(path, async function (err) {
+                    
                     if (err) {
                         console.log(err);
                     } 
