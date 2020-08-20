@@ -66,9 +66,11 @@
     <div class="item">
         
           <div class="card" >
+            <a href="/products/details/<%= product._id %>">
               <img class="card-img-top" src="/product_images/<%= product._id %>_<%= product.image %>" alt="<%= product.name %>" width="200" height="200">
+            </a>
               <div class="card-body" style="align-items: center;">
-                <h5 class="card-title" style="font-size: large;"> <a href="/products/details/<%= product._id %>"><%= product.name %></a></h5>
+                <h5 class="card-title" style="font-size: large;"> <%= product.name %></h5>
                 <p class="card-text" style="font-size: medium;">Category : <%= product.category %></p>
                 
                 <br> 

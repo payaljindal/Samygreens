@@ -10,7 +10,9 @@
     <% products.forEach(function(product){ %> 
       <div class="column column-block" >
         <div class="card" style="width: 25rem;padding: 5px 5px;margin-left: 20px;">
+          <a href="/products/details/<%= product._id %>">
             <img class="card-img-top" src="/product_images/<%= product._id %>_<%= product.image %>" alt="<%= product.name %>" width="200" height="200">
+          </a>
             <div class="card-body">
               <h5 class="card-title" style="font-size: large;"><%= product.name %></h5>
               <!-- <p class="card-text" style="font-size: medium;">Category : <%= product.category %></p> -->
