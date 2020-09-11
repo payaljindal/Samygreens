@@ -168,7 +168,7 @@ router.get('/edit-product/:id',isAdmin, function (req, res) {
 });
 
 router.post('/edit-product/:id',isAdmin, async function (req, res) {
-    const{ name, flavour, texture, taste, suggesteduse, price , category , image , available} = req.body;
+    const{ name, flavour, texture, taste, suggesteduse, price , category , image } = req.body;
     let existing;
     const id = req.params.id;
 
@@ -177,7 +177,7 @@ router.post('/edit-product/:id',isAdmin, async function (req, res) {
             console.log(err);
                         
         if (existing) {
-            existing.available = available;
+            
             if(name != "")
             existing.name = name;
             if(flavour != "")

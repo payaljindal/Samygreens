@@ -3,7 +3,7 @@ const uniqueValidator = require('mongoose-unique-validator');
 const schema = mongoose.Schema;
 
 const productSchema = new schema({
-	name : {type : String, required : true, unique: true},
+	name : {type : String, required : true},
 	image : {type: String , required : true},
 	texture : {type : String },
 	flavour : {type : String },
@@ -11,7 +11,7 @@ const productSchema = new schema({
 	suggesteduse  : {type : String},
 	price : { type : Number},
 	category : {type : String},
-	available : {type : Boolean},
+	
 });
 
 productSchema.plugin(uniqueValidator);

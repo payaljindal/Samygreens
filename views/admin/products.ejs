@@ -12,7 +12,7 @@
             <th>Price</th>
             <th>Category</th>
             <th>Product Image</th>
-            <th>Available</th>
+            
             <th>Edit</th>
             <th>Delete</th>
         </tr>
@@ -31,13 +31,7 @@
                 <img id="noimage" src="/product_images/<%= product._id %>_<%= product.image %>" width="50" height="50">
                 <% }%>
             </td>
-            <td> <% if (product.available){ %>
-                Yes
-            <% }else{ %>
-                No
-                <% } %>
             
-            </td>
             <td><a href="/admin/products/edit-product/<%= product._id %>">Edit</a></td>
             <td><a class="confirmDeletion" href="/admin/products/delete-product/<%= product._id %>">Delete</a></td>
         </tr>
