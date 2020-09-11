@@ -19,6 +19,10 @@ router.get('/contact',function(req,res){
     res.render('contactus',{title : 'Contact Us'});
 });
 
+router.get('/partners',function(req,res){
+  res.render('partners',{title : 'Business Partners'});
+});
+
 router.get('/herbs',function(req,res){
   res.render('herbs',{
     title : 'About Herbs',
