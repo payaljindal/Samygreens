@@ -91,88 +91,89 @@
   <span style="color:#065722;font-size: medium;"><br>We believe in the famous adage : “You are what you eat” </span>
   </center>
   <br>
-
-      <nav class="navbar navbar-expand-lg navbar-light   sticky-top" style="background-color: #e0eee5;">
-        <a class="navbar-brand" href="/" > <span  style="font-size: 1.8em" >
-        <img src="/images/logo.png" alt="" width="140" height="40">
-          <!-- Samy Greens -->
-        </span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
+  <nav class="navbar navbar-expand-lg navbar-light   sticky-top" style="background-color: #e0eee5;">
+    <a class="navbar-brand" href="/" > <span  style="font-size: 1.8em" >
+    <img src="/images/logo.png" alt="" width="140" height="40">
+      <!-- Samy Greens -->
+    </span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        
+        <li class="nav-item">
+          <a href="/" class="nav-link mx-4"><span  style="font-size: 1.8em" >Home</span></a>
+        </li>
+        <li  class="nav-item"><a href="/about" class="nav-link mx-4"><span  style="font-size: 1.8em" >About</span></a></li>
+        
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle nav-link mx-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span  style="font-size: 1.8em" >Products</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" width="100">
             
-            <li class="nav-item">
-              <a href="/" class="nav-link mx-4"><span  style="font-size: 1.8em" >Home</span></a>
-            </li>
-            <li  class="nav-item"><a href="/about" class="nav-link mx-4"><span  style="font-size: 1.8em" >About</span></a></li>
-            <li  class="nav-item"><a href="/contact" class="nav-link mx-4"><span  style="font-size: 1.8em" >Contact Us</span></a></li>
-            <li  class="nav-item"><a href="/partners" class="nav-link mx-4"><span  style="font-size: 1.8em" >Business Partners</span></a></li>
-           
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle nav-link mx-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span  style="font-size: 1.8em" >Products</span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown" width="100">
+            <div class="dropdown-item">
+              <form method="post" action="/products/category" >
+              
+                <input name="category" class="form-control hidden" value="Microgreens" style="padding: 20px 9px;font-size: 16px"></input>
                 
-                <div class="dropdown-item">
-                  <form method="post" action="/products/category" >
-                  
-                    <input name="category" class="form-control hidden" value="Microgreens" style="padding: 20px 9px;font-size: 16px"></input>
-                    
-                    <button style="border: 0ch;font-size: 1.8em;background-color: white;"> Microgreens</button>
-                </form>
-                </div>
-
-
-              <form method="post" action="/products/category" class="dropdown-item">
-                <input name="category" class="form-control hidden" value="Edible Flowers" style="padding: 20px 9px;font-size: 16px"></input>
-                <button style="border: 0ch;font-size: 1.8em;background-color: white;">Edible Flowers</button>
+                <button style="border: 0ch;font-size: 1.8em;background-color: white;"> Microgreens</button>
             </form>
-
-            <form method="post" action="/products/category" class="dropdown-item">
-              <input name="category" class="form-control hidden" value="Fresh Herbs" style="padding: 20px 9px;font-size: 16px"></input>
-
-              <button style="border: 0ch;font-size: 1.8em;background-color: white;">Fresh Herbs</button>
-          </form>
+            </div>
 
 
           <form method="post" action="/products/category" class="dropdown-item">
-            <input name="category" class="form-control hidden" value="Rockets" style="padding: 20px 9px;font-size: 16px"></input>
-            <button style="border: 0ch;font-size: 1.8em;background-color: white;">Rockets</button>
+            <input name="category" class="form-control hidden" value="Edible Flowers" style="padding: 20px 9px;font-size: 16px"></input>
+            <button style="border: 0ch;font-size: 1.8em;background-color: white;">Edible Flowers</button>
         </form>
 
-
         <form method="post" action="/products/category" class="dropdown-item">
-          <input name="category" class="form-control hidden" value="Basils" style="padding: 20px 9px;font-size: 16px"></input>
-          <button style="border: 0ch;font-size: 1.8em;background-color: white;">Basils</button>
+          <input name="category" class="form-control hidden" value="Fresh Herbs" style="padding: 20px 9px;font-size: 16px"></input>
+
+          <button style="border: 0ch;font-size: 1.8em;background-color: white;">Fresh Herbs</button>
       </form>
 
 
       <form method="post" action="/products/category" class="dropdown-item">
-        <input name="category" class="form-control hidden" value="Baby Vegetables" style="padding: 20px 9px;font-size: 16px"></input>
-        <button style="border: 0ch;font-size: 1.8em;background-color: white;">Baby Vegetables</button>
+        <input name="category" class="form-control hidden" value="Rockets" style="padding: 20px 9px;font-size: 16px"></input>
+        <button style="border: 0ch;font-size: 1.8em;background-color: white;">Rockets</button>
     </form>
 
+
     <form method="post" action="/products/category" class="dropdown-item">
-      <input name="category" class="form-control hidden" value="Others" style="padding: 20px 9px;font-size: 16px"></input>
-      <button style="border: 0ch;font-size: 1.8em;background-color: white;">Others</button>
+      <input name="category" class="form-control hidden" value="Basils" style="padding: 20px 9px;font-size: 16px"></input>
+      <button style="border: 0ch;font-size: 1.8em;background-color: white;">Basils</button>
   </form>
-                
-                
-                
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/products/all"><span  style="font-size: 1.8em" >All products</span></a>
-              </div>
-            </li>
 
+
+  <form method="post" action="/products/category" class="dropdown-item">
+    <input name="category" class="form-control hidden" value="Baby Vegetables" style="padding: 20px 9px;font-size: 16px"></input>
+    <button style="border: 0ch;font-size: 1.8em;background-color: white;">Baby Vegetables</button>
+</form>
+
+<form method="post" action="/products/category" class="dropdown-item">
+  <input name="category" class="form-control hidden" value="Others" style="padding: 20px 9px;font-size: 16px"></input>
+  <button style="border: 0ch;font-size: 1.8em;background-color: white;">Others</button>
+</form>
             
-          </ul>
+            
+            
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/products/all"><span  style="font-size: 1.8em" >All products</span></a>
+          </div>
+        </li>
+        <li  class="nav-item"><a href="/saladbox" class="nav-link mx-4"><span  style="font-size: 1.8em" >Salad Box</span></a></li>
+        <li  class="nav-item"><a href="/partners" class="nav-link mx-4"><span  style="font-size: 1.8em" >Business Partners</span></a></li>
+        <li  class="nav-item"><a href="/contact" class="nav-link mx-4"><span  style="font-size: 1.8em" >Contact Us</span></a></li>
         
+        
+      </ul>
+    
 
-        </div>
-      </nav>
+    </div>
+  </nav>
 
 
         <div class="container">
@@ -252,22 +253,23 @@
         Shruti. As Me and my husband, Samir both are passionate about
         plants, we picked the idea.
         <br>
-        With the timely support of Chef Tarun Kumar and Chef Neeraj at Hyatt
+        With the timely support of Ex Chef Tarun Kumar and Chef Neeraj at Hyatt
         Regency, Ludhiana the journey of SAMY Greens started in the year
-        2015. With no agriculture background and no knowledge of our range
+        2015. With no agriculture background and knowledge of our range
         of products, we are today what we are solely due to the guidance of
         Chefs and Business Partners. We are indeed grateful to them, for all
         the support and guidance.
         <br>
         It has been a constant endeavor of SAMY Greens to LISTEN to its
-        customers. It has always put and earnest effort to implement the
-        suggestions and advise of the customers.
+        customers. We have always put an earnest effort to implement the
+        suggestions and advise of the customers.We are slowly and steadily
+        increasing our reach in NCR belt.
       </div>
 
       <div>
         <div class="col-md-6" style="font-size: medium;">
-          We take pride in mentioning
-          that our products is sourced by all the major Hotels and Restaurants.
+          Growing pure, we take pride in mentioning
+          that our products are sourced by all the major Hotels and Restaurants.
           Currently we are the largest supplier of Microgreens in the state of
           Punjab, Haryana and Himachal. Growing Pure, Fresh and Healthy
           Microgreens has been our passion and not profession.
@@ -310,7 +312,7 @@
 
 
 <!-- info ends  -->
-<br> <br>
+<!-- <br> <br>
 <div class="container">
 
 <div style="border: 7px #F4FCEF;border-style: solid;padding: 15px 15px;border-radius: 2%;">
@@ -322,12 +324,12 @@
     </div>
   </center>
 
-<br><br>
+<br><br> -->
 <!-- products list -->
 
 
   
-<div class="owl-carousel owl-theme">
+<!-- <div class="owl-carousel owl-theme">
   <% products.forEach(function(product){ %>
     <div class="item">
         
@@ -342,7 +344,7 @@
                 <br> 
                 
                   
-                 <!-- <span class="btn btn-default btn-info" style="background-color: #4CAF50;font-size: 16px;text-align: center;align-items: flex-end;"><%= product.flavour %></span></p> -->
+                 <span class="btn btn-default btn-info" style="background-color: #4CAF50;font-size: 16px;text-align: center;align-items: flex-end;"><%= product.flavour %></span></p>
                     
                     
                                
@@ -355,7 +357,7 @@
 
 
   
-</div>
+</div> -->
 
 </div>
 <br><br>

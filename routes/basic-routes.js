@@ -19,6 +19,10 @@ router.get('/contact',function(req,res){
     res.render('contactus',{title : 'Contact Us'});
 });
 
+router.get('/saladbox',function(req,res){
+  res.render('saladbox',{title : 'Subscribe'});
+});
+
 router.get('/partners',function(req,res){
   res.render('partners',{title : 'Business Partners'});
 });
