@@ -27,6 +27,10 @@ router.get('/partners',function(req,res){
   res.render('partners',{title : 'Business Partners'});
 });
 
+router.get('/testimonials',function(req,res){
+  res.render('testimonials',{title : 'Testimonials'});
+});
+
 router.get('/herbs',function(req,res){
   res.render('herbs',{
     title : 'About Herbs',
